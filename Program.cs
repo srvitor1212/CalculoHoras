@@ -1,7 +1,11 @@
 ﻿using CalculoHoras.App.Processamento;
 using CalculoHoras.Application.DTO;
 using CalculoHoras.Application.Processamento;
+
+
+
 Console.WriteLine($"versão 1.0\n\n");
+
 
 
 var ambiente = new ConfiguracaoAmbiente();
