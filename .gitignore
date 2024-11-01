@@ -1,0 +1,10 @@
+.vscode
+.vs
+
+bin/
+Bin/
+obj/
+Obj/
+/MeusExemplos/ExemploModelagemBD/DataBaseSQLIte*
+**/PublishProfiles
+**csproj.user
