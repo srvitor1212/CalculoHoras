@@ -1,7 +1,7 @@
 ﻿using CalculoHoras.App.Processamento;
 using CalculoHoras.Application.DTO;
 using CalculoHoras.Application.Processamento;
-Console.WriteLine($"versão 1.0\n\n");
+Console.WriteLine($"versão 1.1\n\n");
 
 
 var ambiente = new ConfiguracaoAmbiente();
@@ -16,6 +16,7 @@ var marcacoes = new List<Marcacao>();
 
 foreach (var arquivo in arquivos.Arquivos)
 {
+    Console.WriteLine($"Processando arquivo {arquivo}");
     marcacoes.AddRange(importar.GetMarcacoes(arquivo));
 }
 

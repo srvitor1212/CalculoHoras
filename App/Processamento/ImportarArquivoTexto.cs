@@ -5,6 +5,8 @@ namespace CalculoHoras.App.Processamento;
 
 public class ImportarArquivoTexto
 {
+    const int EXPECTED_COLUMN_NUMBER = 5;
+
     public string Path { get; private set; } = string.Empty;
     public string NomeArquivo { get; private set; } = string.Empty;
     public string FullPath { get; private set; } = string.Empty;
@@ -50,6 +52,9 @@ public class ImportarArquivoTexto
                 continue;
 
             var colunasArquivoOriginal = linha.Split('\t');
+
+            if (colunasArquivoOriginal.Length < EXPECTED_COLUMN_NUMBER)
+                continue;
 
             var colunas = ConverterColunas(colunasArquivoOriginal);
 
