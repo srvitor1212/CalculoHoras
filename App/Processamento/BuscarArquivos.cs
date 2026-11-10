@@ -6,13 +6,15 @@ public class BuscarArquivos
 {
     public List<string> Arquivos { get; set; } = new List<string>();
 
-    private readonly string LabelPadrao = @"Registro de atendimento\(Funcionário-\d+\)\.txt";
+    private readonly string LabelPadrao = string.Empty;
 
     private readonly ConfiguracaoAmbiente _configuracaoAmbiente;
 
-    public BuscarArquivos(ConfiguracaoAmbiente configuracaoAmbiente)
+    public BuscarArquivos(ConfiguracaoAmbiente configuracaoAmbiente, string label)
     {
         _configuracaoAmbiente = configuracaoAmbiente;
+
+        LabelPadrao = label;
 
         GetArquivosParaImportar();
     }
